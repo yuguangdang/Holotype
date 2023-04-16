@@ -26,7 +26,7 @@ The posts on the platform are organized into categories to facilitate easy searc
 </p>
 <div>
 <img src="https://user-images.githubusercontent.com/55920971/232281562-a860a698-0f2c-45a6-ace0-70e8cbb3bf55.jpeg" width="150" height="300">
-<img src="https://user-images.githubusercontent.com/55920971/232281528-6fa7a35b-3566-4313-a9ab-bbd0a8fb8ad3.jpeg" width="150" height="300">
+<img src="https://user-images.githubusercontent.com/55920971/232285888-ff21249a-2689-4f8f-b886-26fa45fc7c2c.png" width="150" height="300">
 </div>
 
 <p>
