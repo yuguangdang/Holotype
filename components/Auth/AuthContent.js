@@ -6,10 +6,13 @@ import AuthForm from "./AuthForm";
 import FlatButton from "./FlatButton";
 import { createUser, login } from "../../util/http";
 import { AuthContext } from "../../store/context/auth-context";
+import LoadingOverlay from "../UI/LoadingOverlay";
 
 function AuthContent({ isLogin, switchHandler, loginHandler }) {
   const navigation = useNavigation();
   const authCtx = useContext(AuthContext);
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [credentialsInvalid, setCredentialsInvalid] = useState({
     name: false,
@@ -94,10 +97,12 @@ function AuthContent({ isLogin, switchHandler, loginHandler }) {
       };
     }
 
+    setIsSubmitting(true);
     if (isLogin) {
       login(user)
         .then((res) => {
           // console.log(res)
+          setIsSubmitting(false);
           authCtx.authenticate(
             res.data.token,
             res.data.userId,
@@ -122,6 +127,7 @@ function AuthContent({ isLogin, switchHandler, loginHandler }) {
 
   return (
     <View style={styles.authContent}>
+      {isSubmitting && <LoadingOverlay text={"Log in ..."} />}
       <AuthForm
         isLogin={isLogin}
         onSubmit={submitHandler}

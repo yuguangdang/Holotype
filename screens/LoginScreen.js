@@ -4,7 +4,6 @@ import {
   StyleSheet,
   ImageBackground,
   KeyboardAvoidingView,
-  useEffect,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useIsFocused } from "@react-navigation/native";
@@ -12,16 +11,11 @@ import { useIsFocused } from "@react-navigation/native";
 import Colors from "../constants/Colors";
 import AuthContent from "../components/Auth/AuthContent";
 import { useState } from "react";
-import PrimaryButton from "../components/UI/PrimaryButton";
 
 function LoginScreen({ navigation }) {
   const [isLogin, setIslogin] = useState(true);
 
   const isFocused = useIsFocused();
-
-  // useEffect(() => {
-  //   setIsFetching(false);
-  // }, [isFocused]);
 
   const switchAuthModeHandler = () => {
     setIslogin(!isLogin);
@@ -51,7 +45,7 @@ function LoginScreen({ navigation }) {
         style={styles.rootScreen}
       >
         <ImageBackground
-          source={require("../assets/images/background0.png")}
+          source={require("../assets/images/background1.png")}
           resizeMode="cover"
           style={styles.rootScreen}
           imageStyle={styles.backgroundImage}
@@ -77,8 +71,6 @@ function LoginScreen({ navigation }) {
                 Sign Up
               </PrimaryButton>
             </View> */}
-
-            
           </View>
         </ImageBackground>
       </LinearGradient>
