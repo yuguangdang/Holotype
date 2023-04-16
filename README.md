@@ -71,5 +71,5 @@ On the profile page, users can check their posts and favoured posts.
 <li> Use your mobile device to scan the QR code to run the simulator on your phone.</li>
 </ol>
 <p>
-Please note, for security purposes, the config file containing the GOOGLE_API_KEY has not been included in this repository. Therefore, to successfully run the app on the simulator, a new GOOGLE_API_KEY will be required.
+Please note, for security reasons, the config file containing the GOOGLE_API_KEY has not been included in this repository. Therefore, to successfully run the app on the simulator, a new GOOGLE_API_KEY will be required.
 </P>
