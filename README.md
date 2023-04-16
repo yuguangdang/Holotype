@@ -44,18 +44,26 @@ Other users can comment and vote up/down a post depending on whether they believ
 </div>
 
 <p>
-Other users can vote up/down a post depending on whether they believe it is a new species. Once a post has received enough votes (10 as the default), the post will be sent to taxonomists for further investigation.
+In the interface of taxonomists, there is a waiting list of posts for them to look into. Taxonomists are able to verify or reject a post and provide extra information.
 </p>
 <div>
-<img src="https://user-images.githubusercontent.com/55920971/232283426-261138a8-b1d0-4a9b-9a9a-1515b84f9c35.png" width="150" height="300">
-<img src="https://user-images.githubusercontent.com/55920971/232283431-6d848aad-3e5a-4048-9380-da7891771bbd.jpeg" width="150" height="300">
+<img src="https://user-images.githubusercontent.com/55920971/232283577-f4c02036-099a-4ffa-8d23-dc2bbb028eb5.jpeg" width="150" height="300">
+<img src="https://user-images.githubusercontent.com/55920971/232283589-7dad8e3e-fa46-4937-9833-70e005cc00ed.jpeg" width="150" height="300">
 </div>
-![AC20EE3A-1F32-4E11-88AC-BBB33A7824CB](https://user-images.githubusercontent.com/55920971/232283596-45e280bc-db8b-4d40-8fad-8fcdf1fd8e0a.png)
 
+<p>
+On the profile page, users can check their posts and favoured posts.
+</p>
+<div>
+<img src="https://user-images.githubusercontent.com/55920971/232283965-ea88599b-d180-455b-9b4f-1260c9ec5a4e.jpeg" width="150" height="300">
+<img src="https://user-images.githubusercontent.com/55920971/232283967-ee09fccc-8c4d-4891-b5ad-931af4062547.jpeg" width="150" height="300">
+</div>
 
-![37875CE3-4938-402E-8BA7-8DA5B90BB479_1_105_c](https://user-images.githubusercontent.com/55920971/232283577-f4c02036-099a-4ffa-8d23-dc2bbb028eb5.jpeg)
-
-![4CD8ECFD-5F0C-4A3D-9605-CC3EE1531DBE_1_105_c](https://user-images.githubusercontent.com/55920971/232283589-7dad8e3e-fa46-4937-9833-70e005cc00ed.jpeg)
-
-
-
+<h3>How to run the App</h3>
+<ol>
+<li>Install NodeJS if it is not installed on the computer.</li>
+<li> Download Expo Go on your mobile device.</li>
+<li> Open the terminal, on the Holotype root directory, type "npm install" to install all the dependencies.</li>
+<li> Type "npm start" to run the code and it will generate a QR code.</li>
+<li> Use your mobile device to scan the QR code to run the simulator on your phone.</li>
+</ol>
