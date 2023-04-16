@@ -4,7 +4,10 @@
 
 <p>
 Identifying new species is a complex process that involves a detailed analysis and evaluation of various factors. Holotype is a crowdsourcing approach that can generate a substantial dataset of potential new species, which can be further examined by taxonomists to make a final determination. This method can be a valuable tool for biodiversity research in Australia.
+</p>
 
+<h3>Project architecture</h3>
+<p>
 Holotype is a mobile application that utilizes React Native as its front-end framework and NodeJS as its back-end technology. It stores its data on a MongoDB database, and the back-end is designed as a RESTful API. This API is deployed on Google Cloud Platform's App Engine, which is integrated with Google Storage to serve as the file system. This architecture allows the application to be scalable and capable of handling increasing traffic and data storage requirements.
 </p>
 
