@@ -1,6 +1,6 @@
 # Holotype
 
-<h3>Over View</h3>
+<h3>Overview</h3>
 
 <p>
 Identifying new species is a complex process that involves a detailed analysis and evaluation of various factors. Holotype is a crowdsourcing approach that can generate a substantial dataset of potential new species, which can be further examined by taxonomists to make a final determination. This method can be a valuable tool for biodiversity research in Australia.
