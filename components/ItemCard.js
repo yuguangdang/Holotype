@@ -57,7 +57,7 @@ const ItemCard = (props) => {
           <View style={styles.title}>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <Paragraph style={styles.textColor}>
-                {props.item.title.split("").slice(0, 7).join(" ")}
+                {props.item.title.split("").slice(0, 7).join("")}
                 {props.item.title.split("").length > 7 ? "..." : ""}
               </Paragraph>
               <Text style={styles.textColor}>

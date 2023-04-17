@@ -6,7 +6,6 @@ import {
   KeyboardAvoidingView,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { useIsFocused } from "@react-navigation/native";
 
 import Colors from "../constants/Colors";
 import AuthContent from "../components/Auth/AuthContent";
@@ -14,8 +13,6 @@ import { useState } from "react";
 
 function LoginScreen({ navigation }) {
   const [isLogin, setIslogin] = useState(true);
-
-  const isFocused = useIsFocused();
 
   const switchAuthModeHandler = () => {
     setIslogin(!isLogin);

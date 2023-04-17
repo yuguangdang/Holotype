@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import { Alert, StyleSheet, View } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 
 import AuthForm from "./AuthForm";
 import FlatButton from "./FlatButton";
@@ -9,10 +8,8 @@ import { AuthContext } from "../../store/context/auth-context";
 import LoadingOverlay from "../UI/LoadingOverlay";
 
 function AuthContent({ isLogin, switchHandler, loginHandler }) {
-  const navigation = useNavigation();
+  const [isSubmiting, setIsSubmiting] = useState(false);
   const authCtx = useContext(AuthContext);
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [credentialsInvalid, setCredentialsInvalid] = useState({
     name: false,
@@ -22,13 +19,16 @@ function AuthContent({ isLogin, switchHandler, loginHandler }) {
   });
 
   function onAuthenticate(user) {
+    setIsSubmiting(true)
     createUser(user)
       .then((res) => {
+        setIsSubmiting(false)
         console.log(res);
         switchHandler();
         Alert.alert("Message", "You've signed up. Please login.");
       })
       .catch((err) => {
+        setIsSubmiting(false)
         console.log(err);
         Alert.alert("Alert", "Registration failed. Please check your input.");
       });
@@ -97,12 +97,12 @@ function AuthContent({ isLogin, switchHandler, loginHandler }) {
       };
     }
 
-    setIsSubmitting(true);
     if (isLogin) {
+      setIsSubmiting(true)
       login(user)
         .then((res) => {
           // console.log(res)
-          setIsSubmitting(false);
+          setIsSubmiting(false)
           authCtx.authenticate(
             res.data.token,
             res.data.userId,
@@ -114,6 +114,7 @@ function AuthContent({ isLogin, switchHandler, loginHandler }) {
           loginHandler();
         })
         .catch((err) => {
+          setIsSubmiting(false)
           console.log(err);
           Alert.alert(
             "Alert",
@@ -127,7 +128,7 @@ function AuthContent({ isLogin, switchHandler, loginHandler }) {
 
   return (
     <View style={styles.authContent}>
-      {isSubmitting && <LoadingOverlay text={"Log in ..."} />}
+      {isSubmiting && <LoadingOverlay text={isLogin? 'Log in ...' : 'Sign up ...'} />}
       <AuthForm
         isLogin={isLogin}
         onSubmit={submitHandler}
